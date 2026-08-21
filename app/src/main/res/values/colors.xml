@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- System-like colors -->
+    <color name="holo_blue">#ff33b5e5</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="gingerbread_green">#ff99cc00</color>
+
+    <!-- Bubble colors -->
+    <color name="bubble_out_light">#E1FFC7</color>
+    <color name="bubble_out_dark">#2B5121</color>
+    <color name="bubble_in_light">#FFFFFF</color>
+    <color name="bubble_in_dark">#333333</color>
+
+    <color name="text_name_light">#33B5E5</color>
+    <color name="text_name_dark">#42A5F5</color>
+
+    <color name="divider_light">#cccccc</color>
+    <color name="divider_dark">#444444</color>
+</resources>

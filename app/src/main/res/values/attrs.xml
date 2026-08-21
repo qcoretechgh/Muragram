@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="muragramMessageBubbleIn" format="reference|color" />
+    <attr name="muragramMessageBubbleOut" format="reference|color" />
+    <attr name="muragramBottomBarBackground" format="reference|color" />
+    <attr name="muragramLoginBoxBackground" format="reference|color" />
+    <attr name="muragramDialogFrame" format="reference|color" />
+    <attr name="muragramFileLayoutBackground" format="reference|color" />
+    <attr name="muragramSearchContainerBackground" format="reference|color" />
+    <attr name="muragramDividerColor" format="reference|color" />
+    <attr name="muragramMediaBackground" format="reference|color" />
+    <attr name="muragramReplyPreviewBackground" format="reference|color" />
+    <attr name="muragramTitleBarBackground" format="reference|color" />
+    <attr name="muragramButtonStyle" format="reference" />
+    <attr name="muragramButtonStyleSmall" format="reference" />
+</resources>

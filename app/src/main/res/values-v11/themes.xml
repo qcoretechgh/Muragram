@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NATIVE HOLO THEME (API 11+) -->
+    <style name="Theme.Muragram" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/Widget.Muragram.ActionBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:colorBackground">@android:color/white</item>
+
+        <item name="muragramMessageBubbleIn">@android:color/transparent</item>
+        <item name="muragramMessageBubbleOut">@android:color/transparent</item>
+        <item name="muragramBottomBarBackground">#F0F0F0</item>
+        <item name="muragramLoginBoxBackground">?android:attr/editTextBackground</item>
+        <item name="muragramDialogFrame">@android:drawable/dialog_holo_light_frame</item>
+        <item name="muragramFileLayoutBackground">#F0F0F0</item>
+        <item name="muragramSearchContainerBackground">@android:color/white</item>
+        <item name="muragramDividerColor">#CCCCCC</item>
+        <item name="muragramMediaBackground">@android:color/black</item>
+        <item name="muragramReplyPreviewBackground">#E3F2FD</item>
+        <item name="muragramTitleBarBackground">#E0E0E0</item>
+
+        <item name="muragramButtonStyle">@android:style/Widget.Holo.Light.Button</item>
+        <item name="muragramButtonStyleSmall">@android:style/Widget.Holo.Light.Button.Small</item>
+    </style>
+
+    <style name="Theme.Muragram.Dark" parent="android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/Widget.Muragram.ActionBar.Dark</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:colorBackgroundCacheHint">@android:color/black</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">#999999</item>
+        <item name="android:textColorTertiary">#666666</item>
+        <item name="android:textColorPrimaryInverse">@android:color/black</item>
+
+        <item name="muragramMessageBubbleIn">@android:color/transparent</item>
+        <item name="muragramMessageBubbleOut">@android:color/transparent</item>
+        <item name="muragramBottomBarBackground">#121212</item>
+        <item name="muragramLoginBoxBackground">?android:attr/editTextBackground</item>
+        <item name="muragramDialogFrame">@android:drawable/dialog_holo_dark_frame</item>
+        <item name="muragramFileLayoutBackground">#222222</item>
+        <item name="muragramSearchContainerBackground">@android:color/black</item>
+        <item name="muragramDividerColor">#333333</item>
+        <item name="muragramMediaBackground">@android:color/black</item>
+        <item name="muragramReplyPreviewBackground">#004D40</item>
+        <item name="muragramTitleBarBackground">#222222</item>
+
+        <item name="muragramButtonStyle">@android:style/Widget.Holo.Button</item>
+        <item name="muragramButtonStyleSmall">@android:style/Widget.Holo.Button.Small</item>
+    </style>
+
+    <style name="Widget.Muragram.ActionBar" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:displayOptions">showTitle|useLogo|showHome</item>
+    </style>
+
+    <style name="Widget.Muragram.ActionBar.Dark" parent="android:Widget.Holo.ActionBar">
+        <item name="android:displayOptions">showTitle|useLogo|showHome</item>
+    </style>
+
+    <style name="ChatItemStyle">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="ChatItemTextPrimary">
+        <item name="android:textAppearance">?android:attr/textAppearanceListItem</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="ChatItemTextSecondary">
+        <item name="android:textAppearance">?android:attr/textAppearanceListItemSmall</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="ReplyPreviewStyle">
+        <item name="android:background">?attr/muragramReplyPreviewBackground</item>
+    </style>
+</resources>

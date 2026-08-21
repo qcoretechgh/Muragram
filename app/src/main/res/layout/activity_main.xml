@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <ListView
+        android:id="@+id/chatList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="?attr/muragramDividerColor"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none" />
+
+    <LinearLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/black"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_results"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <ListView
+            android:id="@+id/searchList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="?attr/muragramDividerColor"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+</FrameLayout>

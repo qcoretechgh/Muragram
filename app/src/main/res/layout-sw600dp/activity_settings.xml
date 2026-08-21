@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+
+    <!-- Categories List (Left Panel) -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="?android:attr/windowBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/settings"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?android:attr/textColorPrimary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?attr/muragramDividerColor" />
+
+        <ListView
+            android:id="@+id/categoryList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="?attr/muragramDividerColor"
+            android:dividerHeight="1dp"
+            android:choiceMode="singleChoice" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="?attr/muragramDividerColor" />
+
+    <!-- Content Panel (Right Panel) -->
+    <ScrollView
+        android:id="@+id/settingsScroll"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:background="?android:attr/windowBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- GENERAL -->
+            <LinearLayout android:id="@+id/sectionGeneral" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="?android:attr/listSeparatorTextViewStyle" android:text="@string/language" />
+                <Button android:id="@+id/languageButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/language" style="?attr/muragramButtonStyle" />
+                <Button android:id="@+id/appInfoButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/about" style="?attr/muragramButtonStyle" />
+            </LinearLayout>
+
+            <!-- APPEARANCE -->
+            <LinearLayout android:id="@+id/sectionAppearance" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="?android:attr/listSeparatorTextViewStyle" android:text="@string/appearance" />
+                <CheckBox android:id="@+id/darkThemeCheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dark_theme" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chat_text_size" />
+                    <EditText android:id="@+id/textSizeInput" android:layout_width="100dp" android:layout_height="wrap_content" android:inputType="number" android:layout_marginLeft="16dp" />
+                </LinearLayout>
+                <CheckBox android:id="@+id/showDateCheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/show_date_time" />
+            </LinearLayout>
+
+            <!-- NOTIFICATIONS -->
+            <LinearLayout android:id="@+id/sectionNotifications" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="?android:attr/listSeparatorTextViewStyle" android:text="@string/notifications" />
+                <CheckBox android:id="@+id/soundCheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/enable_sound" />
+                <CheckBox android:id="@+id/vibrateCheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/enable_vibration" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/poll_interval" />
+                    <EditText android:id="@+id/pollInput" android:layout_width="100dp" android:layout_height="wrap_content" android:inputType="number" android:layout_marginLeft="16dp" />
+                </LinearLayout>
+                <CheckBox android:id="@+id/whitelistCheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/use_whitelist" />
+                <EditText android:id="@+id/whitelistInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/whitelist_hint" />
+            </LinearLayout>
+
+            <!-- NETWORK -->
+            <LinearLayout android:id="@+id/sectionNetwork" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="?android:attr/listSeparatorTextViewStyle" android:text="@string/server_selection" />
+                <RadioGroup android:id="@+id/serverGroup" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RadioButton android:id="@+id/serverMain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/server_main" />
+                    <RadioButton android:id="@+id/serverAlt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/server_alt" />
+                </RadioGroup>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_delay" />
+                    <EditText android:id="@+id/searchDelayInput" android:layout_width="120dp" android:layout_height="wrap_content" android:inputType="number" android:layout_marginLeft="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ACCOUNT -->
+            <LinearLayout android:id="@+id/sectionAccount" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="?android:attr/listSeparatorTextViewStyle" android:text="@string/account" />
+                <Button android:id="@+id/editProfileButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/edit_profile" style="?attr/muragramButtonStyle" />
+                <Button android:id="@+id/infoButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/view_profile_info" style="?attr/muragramButtonStyle" />
+                <Button android:id="@+id/logoutButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/logout_account" style="?attr/muragramButtonStyle" />
+            </LinearLayout>
+
+            <Button android:id="@+id/saveButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/save" android:textStyle="bold" style="?attr/muragramButtonStyle" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

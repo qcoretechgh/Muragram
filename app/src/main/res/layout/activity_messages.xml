@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/messageList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:divider="@null"
+        android:fadingEdge="none" />
+
+    <LinearLayout
+        android:id="@+id/replyPreview"
+        style="@style/ReplyPreviewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+        <View android:layout_width="4dp" android:layout_height="match_parent" android:background="@android:color/darker_gray" />
+        <TextView
+            android:id="@+id/replyText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:textSize="12sp"
+            android:singleLine="true" />
+        <ImageView
+            android:id="@+id/closeReply"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:contentDescription="@string/close_reply_desc" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="#333333">
+
+        <LinearLayout
+            android:id="@+id/normalInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <Button
+                android:id="@+id/attachButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="@string/attach_symbol"
+                android:textSize="18sp"
+                style="?attr/muragramButtonStyleSmall" />
+            <Button
+                android:id="@+id/micButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="@string/mic_symbol"
+                android:textSize="18sp"
+                style="?attr/muragramButtonStyleSmall" />
+            <EditText
+                android:id="@+id/messageInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/message_hint"
+                android:inputType="textShortMessage|textMultiLine"
+                android:maxLines="4"
+                android:padding="8dp" />
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send"
+                style="?attr/muragramButtonStyleSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recordingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="10dp"
+                android:background="@android:drawable/presence_online" />
+            <TextView
+                android:id="@+id/recordingTimer"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/zero_timer"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:paddingLeft="6dp" />
+            <Button
+                android:id="@+id/stopRecordingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stop"
+                style="?attr/muragramButtonStyleSmall" />
+            <Button
+                android:id="@+id/cancelRecordingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/close"
+                style="?attr/muragramButtonStyleSmall" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

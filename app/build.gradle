@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.dycrd.muragram'
+    compileSdk 30
+
+    defaultConfig {
+        applicationId "com.dycrd.muragram"
+        minSdk 9
+        targetSdk 14
+        versionCode 4
+        versionName "1.2"
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("release.jks")
+            storePassword "muragram2025"
+            keyAlias "muragram"
+            keyPassword "muragram2025"
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
